@@ -5,14 +5,15 @@ plugins {
 
 android {
     compileSdk 31
-
+    buildFeatures{
+        viewBinding = true
+    }
     defaultConfig {
         applicationId "com.mahdi.d.o.taha.universitypayroll"
         minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

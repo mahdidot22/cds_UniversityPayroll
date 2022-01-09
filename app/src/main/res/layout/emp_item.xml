@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="7dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/emp_card_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/mainColor"
+        app:cardCornerRadius="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linear_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/emp_img"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/ic_image"
+                    app:tint="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.3"
+                            android:src="@drawable/ic_username" />
+
+                        <TextView
+                            android:id="@+id/emp_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1.7"
+                            android:background="@color/secondaryColor"
+                            android:text="Rebhi Baraka"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.3"
+                            android:src="@drawable/ic_userid" />
+
+                        <TextView
+                            android:id="@+id/emp_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1.7"
+                            android:background="@color/secondaryColor"
+                            android:text="7754"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.3"
+                            android:src="@drawable/ic_contract_type" />
+
+                        <TextView
+                            android:id="@+id/emp_contract_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1.7"
+                            android:background="@color/secondaryColor"
+                            android:text="Full-Time"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_root"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@color/thirdColor"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Info"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2">
+
+                    <ImageView
+                        android:id="@+id/update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:background="@color/secondaryColor"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_update"
+                        app:tint="@android:color/holo_orange_dark" />
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/secondaryColor"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@android:color/holo_red_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+    <!--            <LinearLayout-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content">-->
+    <!--                <TextView-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Rebhi Baraka"-->
+    <!--                    android:id="@+id/emp_accepted_holidays"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:layout_height="wrap_content"/>-->
+    <!--                <TextView-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="Rebhi Baraka"-->
+    <!--                    android:id="@+id/emp_remaining_holidays"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:layout_height="wrap_content"/>-->
+    <!--            </LinearLayout>-->

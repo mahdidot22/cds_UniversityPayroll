@@ -1,3 +1,43 @@
 <resources>
     <string name="app_name">University Payroll</string>
+    <string name="login_screen_title">Unified Authentication System</string>
+    <string name="copyright">©2022 Mahdi PS. All rights reserved.</string>
+    <string name="contact">For further information, call us here:\nPhone:+970598380542.</string>
+    <string name="add_new_employee">Add new Employee</string>
+    <string name="contract">Contract</string>
+    <string name="set_the_new_employee_contract_here_n_welcome">Set The new Employee Contract here:\n Welcome!!</string>
+    <string name="update_the_current_employee_contract_here_n_welcome">Update The current Employee Contract here:\n Welcome!!</string>
+    <string name="edit_contract">Edit Contract</string>
+    <string-array name="contract_type_array">
+        <item>Contract type…</item>
+        <item>Full-Time</item>
+        <item>Part-Time</item>
+    </string-array>
+
+    <string-array name="fixed_price_array">
+        <item>Salary…</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+    </string-array>
+
+    <string-array name="hourly_rate_array">
+        <item>Hourly rate…</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="payment_method_array">
+        <item>Payment method…</item>
+        <item>Check</item>
+        <item>Bank transfer</item>
+        <item>Salary form</item>
+    </string-array>
+
+    <string-array name="holidays_array">
+        <item>Accepted holidays…</item>
+        <item>12</item>
+        <item>6</item>
+    </string-array>
 </resources>
