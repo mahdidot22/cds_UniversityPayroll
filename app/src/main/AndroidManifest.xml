@@ -10,33 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniversityPayroll">
         <activity
-            android:name=".admin.add.Add_Emp"
+            android:name=".admin.notification_Managment.Add_Notification"
             android:exported="false" />
         <activity
-            android:name=".admin.details.Details"
+            android:name=".admin.notification_Managment.Notifications_Managment"
             android:exported="false" />
         <activity
-            android:name=".admin.update.Update_Emp"
+            android:name=".admin.employees_Managment.Add_Emp"
             android:exported="false" />
         <activity
-            android:name=".admin.EmployeesManagement"
+            android:name=".admin.employees_Managment.Employee_Details"
+            android:exported="false" />
+        <activity
+            android:name=".admin.employees_Managment.Update_Emp"
+            android:exported="false" />
+        <activity
+            android:name=".admin.employees_Managment.Employees_Mnagment"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".Splash"
-            android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".MainActivity"

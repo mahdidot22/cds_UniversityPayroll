@@ -1,4 +1,4 @@
-package com.mahdi.d.o.taha.universitypayroll.admin.update
+package com.mahdi.d.o.taha.universitypayroll.admin.employees_Managment
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Spinner
 import android.widget.TextView
+import androidx.core.view.isNotEmpty
 import com.mahdi.d.o.taha.universitypayroll.R
 import com.mahdi.d.o.taha.universitypayroll.adapter.SpinnerAdapter
 import com.mahdi.d.o.taha.universitypayroll.databinding.ActivityUpdateBinding
@@ -16,14 +17,17 @@ class Update_Emp : AppCompatActivity() {
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         val username = intent.getStringExtra("username")
+        val id = intent.getStringExtra("id")
         super.onCreate(savedInstanceState)
         _binding = ActivityUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val cotract_type_items = resources.getStringArray(R.array.contract_type_array)
         val paymentMethods = resources.getStringArray(R.array.payment_method_array)
-        binding.edNewUsername.setText(username)
-        inflateSpinner(cotract_type_items, binding.spNewContractType)
-        inflateSpinner(paymentMethods, binding.spPaymentType)
+        binding.apply {
+            edNewUsername.setText(username)
+            inflateSpinner(cotract_type_items, spNewContractType)
+            inflateSpinner(paymentMethods, spPaymentType)
+        }
     }
 
     private fun inflateSpinner(array: Array<String>, spinner: Spinner) {
@@ -46,8 +50,10 @@ class Update_Emp : AppCompatActivity() {
                     id: Long
                 ) {
                     val value = parent!!.getItemAtPosition(position).toString()
-                    if (value == items[0]) {
-                        (view as TextView).setTextColor(Color.GRAY)
+                    if (spinner.isNotEmpty()) {
+                        if (value == items[0]) {
+                            (view as TextView).setTextColor(Color.GRAY)
+                        }
                     }
                     if (spinner == binding.spNewContractType) {
                         val fixedPrice = resources.getStringArray(R.array.fixed_price_array)

@@ -4,10 +4,24 @@
     <string name="copyright">©2022 Mahdi PS. All rights reserved.</string>
     <string name="contact">For further information, call us here:\nPhone:+970598380542.</string>
     <string name="add_new_employee">Add new Employee</string>
+    <string name="pay_forAll">Pay For All</string>
     <string name="contract">Contract</string>
     <string name="set_the_new_employee_contract_here_n_welcome">Set The new Employee Contract here:\n Welcome!!</string>
     <string name="update_the_current_employee_contract_here_n_welcome">Update The current Employee Contract here:\n Welcome!!</string>
     <string name="edit_contract">Edit Contract</string>
+    <string name="details">Details</string>
+    <string name="pay">Pay</string>
+    <string name="all_employee_details_here_n_welcome">All Employee details here:\n Welcome!</string>
+    <string name="search">Search By name,id and contract type</string>
+    <string name="notifications">Notifications</string>
+    <string name="send_private_or_public_notification">Send private or public notification</string>
+    <string name="content_goes_here">content goes here</string>
+    <string name="sender">sender</string>
+    <string name="receiver">receiver</string>
+    <string name="title_goes_here">title goes here</string>
+    <string name="type_here">Type here...</string>
+    <string name="massage_form">Massage Form</string>
+    <string name="send">Send</string>
     <string-array name="contract_type_array">
         <item>Contract type…</item>
         <item>Full-Time</item>

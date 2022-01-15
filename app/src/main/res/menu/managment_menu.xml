@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_new_emp"
+        android:icon="@drawable/ic_add"
+        android:orderInCategory="200"
+        android:title="@string/add_new_employee"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="100"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/payForAll"
+        android:icon="@drawable/ic_payment"
+        android:orderInCategory="300"
+        android:title="@string/pay_forAll"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_notifications"
+        android:orderInCategory="400"
+        android:title="@string/notifications"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+</menu>
