@@ -11,4 +11,5 @@
     <color name="highlight">#60000000</color>
     <color name="secondaryColor">#F9EEDD</color>
     <color name="thirdColor">#D03A59B7</color>
+    <color name="shimmerBackground">#C2C2C2</color>
 </resources>

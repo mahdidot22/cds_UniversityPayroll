@@ -1,4 +1,4 @@
-package com.mahdi.d.o.taha.universitypayroll.admin.notification_Managment
+package com.mahdi.d.o.taha.universitypayroll.notification_Managment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +11,12 @@ class Add_Notification : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityAddNotificationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.apply {
+            btnSend.setOnClickListener {
+
+            }
+        }
 
     }
 }

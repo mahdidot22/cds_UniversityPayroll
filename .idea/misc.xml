@@ -10,18 +10,26 @@
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout-v23/activity_details.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_add_emp.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_add_notification.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_credit_card_form.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_details.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_employees_manegment.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_notifications.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_statistics.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_update.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/bank_item.xml" value="0.264" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/check_item.xml" value="0.4" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/content_profile.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/emp_item.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/emp_item_grid.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/emp_item_placeholder.xml" value="0.22780797101449277" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/notification_item.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/menu/managment_menu.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/menu/notification_menu.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/xml/provider_paths.xml" value="0.1" />
       </map>
     </option>
   </component>

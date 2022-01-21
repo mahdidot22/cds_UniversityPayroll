@@ -5,27 +5,39 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.mahdi.d.o.taha.universitypayroll.R
-import com.mahdi.d.o.taha.universitypayroll.admin.employees_Managment.Employee_Details
-import com.mahdi.d.o.taha.universitypayroll.admin.employees_Managment.Update_Emp
+import com.mahdi.d.o.taha.universitypayroll.admin.Employee_Details
+import com.mahdi.d.o.taha.universitypayroll.admin.Employees_Mnagment
+import com.mahdi.d.o.taha.universitypayroll.admin.Update_Emp
 import com.mahdi.d.o.taha.universitypayroll.databinding.EmpItemBinding
 import com.mahdi.d.o.taha.universitypayroll.model.Constants
 import com.mahdi.d.o.taha.universitypayroll.model.Emp
+import java.util.*
+import kotlin.collections.ArrayList
 
 class EmployeesRecyclerAdapter(
     val context: Context,
-    var list: ArrayList<Emp>,
+    var list: ArrayList<Emp.EpmJopInfo>,
 ) :
     RecyclerView.Adapter<EmployeesRecyclerAdapter.ViewHolder>() {
     private var _constants: Constants? = null
     private val constants get() = _constants!!
+    private var _db: FirebaseFirestore? = null
+    private val db get() = _db!!
+    private val activity = context as Employees_Mnagment
+
 
     inner class ViewHolder(val binding: EmpItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = EmpItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         _constants = Constants()
+        _db = Firebase.firestore
         return ViewHolder(binding)
     }
 
@@ -35,7 +47,7 @@ class EmployeesRecyclerAdapter(
         }
     }
 
-    fun filterList(filterllist: ArrayList<Emp>) {
+    fun filterList(filterllist: ArrayList<Emp.EpmJopInfo>) {
         list = filterllist
         notifyDataSetChanged()
     }
@@ -44,18 +56,18 @@ class EmployeesRecyclerAdapter(
         return list.size
     }
 
-    private fun setViews(emp: Emp, binding: EmpItemBinding, adapterPosition: Int) {
-        with(emp) {
+    private fun setViews(empInfo: Emp.EpmJopInfo, binding: EmpItemBinding, adapterPosition: Int) {
+        with(empInfo) {
             binding.apply {
-                binding.empName.text = emp_name
-                binding.empId.text = emp_id
-                binding.empContractType.text = emp_contract_type
+                binding.empName.text = emp.emp_name
+                binding.empId.text = emp.emp_id
+                binding.empContractType.text = emp.emp_contract_type
                 binding.info.setOnClickListener {
                     context.startActivity(
                         Intent(
                             context,
                             Employee_Details::class.java
-                        ).putExtra("emp", emp)
+                        ).putExtra("emp", empInfo)
                     )
                 }
                 binding.update.setOnClickListener {
@@ -63,8 +75,9 @@ class EmployeesRecyclerAdapter(
                         Intent(
                             context,
                             Update_Emp::class.java
-                        ).putExtra("username", emp_name).putExtra("id", emp_id)
+                        ).putExtra("emp", empInfo)
                     )
+                    activity.finish()
                 }
                 binding.delete.setOnClickListener {
                     //delete here
@@ -81,8 +94,9 @@ class EmployeesRecyclerAdapter(
                             }
                         }), (DialogInterface.OnClickListener { dialog, _ ->
                             run {
+                                deleteEmp(emp.emp_id.toString())
                                 dialog.cancel()
-                                list.remove(emp)
+                                list.remove(empInfo)
                                 notifyItemRemoved(adapterPosition)
                             }
                         })
@@ -91,5 +105,24 @@ class EmployeesRecyclerAdapter(
             }
         }
 
+    }
+
+    private fun deleteEmp(id: String) {
+        db.collection("payrollUsers").document("fxYCtD3ZCFLQmra6tJng").collection("emp")
+            .whereEqualTo("id", id).get().addOnSuccessListener {
+                if (it.isEmpty) {
+                    constants.toast(
+                        context,
+                        "MISSY ID! PLEASE RETRY AGAIN LATER".lowercase()
+                    )
+                } else {
+                    for (doc in it) {
+                        db.collection("payrollUsers").document("fxYCtD3ZCFLQmra6tJng")
+                            .collection("emp").document(doc.id).delete()
+                    }
+                }
+            }.addOnFailureListener {
+                constants.toast(context, it.localizedMessage!!)
+            }
     }
 }

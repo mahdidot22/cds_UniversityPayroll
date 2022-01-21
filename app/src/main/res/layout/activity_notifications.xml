@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.notification_Managment.Notifications_Managment">
+    tools:context=".notification_Managment.Notifications_Managment">
 
     <androidx.appcompat.widget.Toolbar
         android:background="@color/mainColor"

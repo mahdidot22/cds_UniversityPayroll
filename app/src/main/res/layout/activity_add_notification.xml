@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/highlight"
-    tools:context=".admin.notification_Managment.Add_Notification">
+    tools:context=".notification_Managment.Add_Notification">
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_gravity="center"

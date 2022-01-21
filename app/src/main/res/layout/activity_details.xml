@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/thirdColor"
-    tools:context=".admin.employees_Managment.Employee_Details">
+    tools:context=".admin.Employee_Details">
 
     <LinearLayout
         android:id="@+id/header_title"
@@ -30,19 +30,10 @@
             android:textSize="25sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_pay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/purple_500"
-        android:text="@string/pay"
-        android:textAllCaps="false" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btn_pay"
         android:layout_below="@+id/header_title">
 
         <RelativeLayout
@@ -141,6 +132,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/holidaysLayout1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -162,6 +154,7 @@
 
 
                     <LinearLayout
+                        android:id="@+id/holidaysLayout2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -201,45 +194,6 @@
                             android:hint="3000 monthly" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.2"
-                            android:src="@drawable/ic_payment_day" />
-
-                        <TextView
-                            android:id="@+id/payment_day"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:hint="Next payment at Jan,1st" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.2"
-                            android:src="@drawable/ic_payment" />
-
-                        <TextView
-                            android:id="@+id/payment_type"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:hint="Check Payment" />
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"

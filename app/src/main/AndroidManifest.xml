@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.mahdi.d.o.taha.universitypayroll">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:allowBackup="true"
         android:icon="@drawable/main_icon"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/main_icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UniversityPayroll">
+        android:theme="@style/Theme.UniversityPayroll"
+        android:fullBackupContent="true">
         <activity
-            android:name=".admin.notification_Managment.Add_Notification"
+            android:name=".employee.CreditCardForm"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".employee.Settings"
             android:exported="false" />
         <activity
-            android:name=".admin.notification_Managment.Notifications_Managment"
+            android:name=".employee.Statistics"
             android:exported="false" />
         <activity
-            android:name=".admin.employees_Managment.Add_Emp"
+            android:name=".notification_Managment.Add_Notification"
             android:exported="false" />
         <activity
-            android:name=".admin.employees_Managment.Employee_Details"
+            android:name=".notification_Managment.Notifications_Managment"
             android:exported="false" />
         <activity
-            android:name=".admin.employees_Managment.Update_Emp"
+            android:name=".admin.Add_Emp"
             android:exported="false" />
         <activity
-            android:name=".admin.employees_Managment.Employees_Mnagment"
+            android:name=".admin.Employee_Details"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Update_Emp"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Employees_Mnagment"
             android:exported="false" />
         <activity
             android:name=".Splash"

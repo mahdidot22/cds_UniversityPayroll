@@ -22,6 +22,13 @@
     <string name="type_here">Type here...</string>
     <string name="massage_form">Massage Form</string>
     <string name="send">Send</string>
+    <string name="statistics">Statistics</string>
+    <string name="payment_form">Payment Form</string>
+    <string name="check_form">Check Form</string>
+    <string name="full_name">Full name</string>
+    <string name="gender">Gender</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
     <string-array name="contract_type_array">
         <item>Contract type…</item>
         <item>Full-Time</item>

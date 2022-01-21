@@ -4,9 +4,9 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Emp(
-    val emp_name: String,
-    val emp_id: String,
-    val emp_contract_type: String,
+    val emp_name: String?,
+    val emp_id: String?,
+    val emp_contract_type: String?,
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
@@ -34,23 +34,19 @@ data class Emp(
 
     data class EpmJopInfo(
         val emp: Emp,
-        val emp_accepted_holidays: String,
-        val emp_remaining_holidays: String,
-        val emp_salary: String,
-        val emp_payment_date: String,
-        val emp_payment_type: String,
-        val emp_total_work_days: String,
-        val emp_total_salaries: String,
+        val emp_accepted_holidays: String?,
+        val emp_remaining_holidays: String?,
+        val emp_salary: String?,
+        val emp_date_work_day: String?,
+        val emp_total_salaries: String?,
     ) : Parcelable {
         constructor(parcel: Parcel) : this(
             parcel.readParcelable(Emp::class.java.classLoader)!!,
-            parcel.readString()!!,
-            parcel.readString()!!,
-            parcel.readString()!!,
-            parcel.readString()!!,
-            parcel.readString()!!,
-            parcel.readString()!!,
-            parcel.readString()!!
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString()
         ) {
         }
 
@@ -59,9 +55,7 @@ data class Emp(
             parcel.writeString(emp_accepted_holidays)
             parcel.writeString(emp_remaining_holidays)
             parcel.writeString(emp_salary)
-            parcel.writeString(emp_payment_date)
-            parcel.writeString(emp_payment_type)
-            parcel.writeString(emp_total_work_days)
+            parcel.writeString(emp_date_work_day)
             parcel.writeString(emp_total_salaries)
         }
 
