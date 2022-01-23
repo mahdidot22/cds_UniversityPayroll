@@ -2,6 +2,7 @@ package com.mahdi.d.o.taha.universitypayroll.employee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.mahdi.d.o.taha.universitypayroll.databinding.ActivityCreditCardFormBinding
 
 class CreditCardForm : AppCompatActivity() {
@@ -11,5 +12,8 @@ class CreditCardForm : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityCreditCardFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnTransfer.setOnClickListener {
+            Toast.makeText(this, "Transferred!!", Toast.LENGTH_SHORT).show()
+        }
     }
 }

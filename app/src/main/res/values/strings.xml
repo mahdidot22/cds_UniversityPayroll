@@ -29,6 +29,7 @@
     <string name="gender">Gender</string>
     <string name="male">male</string>
     <string name="female">female</string>
+    <string name="title">Title</string>
     <string-array name="contract_type_array">
         <item>Contract type…</item>
         <item>Full-Time</item>

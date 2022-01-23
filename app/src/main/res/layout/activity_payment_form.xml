@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/highlight"
+    tools:context=".employee.PaymentForm">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/card"
+        android:layout_centerInParent="true"
+        android:text="Payment Method"
+        android:textColor="@color/secondaryColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="32dp"
+        app:cardCornerRadius="15dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mainColor"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+
+            <EditText
+                android:id="@+id/ed_holidays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp" />
+
+            <RadioGroup
+                android:id="@+id/payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/credit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/highlight"
+                    android:text="Credit Card"
+                    android:textColor="@color/secondaryColor" />
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/highlight"
+                    android:text="bank"
+                    android:textColor="@color/secondaryColor" />
+
+                <RadioButton
+                    android:id="@+id/check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/highlight"
+                    android:text="Check"
+                    android:textColor="@color/secondaryColor" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_Payment"
+                android:backgroundTint="@color/thirdColor"
+                android:text="Payment"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

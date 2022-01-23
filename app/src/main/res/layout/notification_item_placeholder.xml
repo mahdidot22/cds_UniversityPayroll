@@ -8,15 +8,11 @@
     android:gravity="center"
     android:orientation="horizontal"
     app:cardElevation="6dp">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/rooot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/secondaryColor"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:padding="16dp">
 
@@ -29,44 +25,43 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_notifications"
-                app:tint="@android:color/holo_orange_light" />
+                android:background="@color/shimmerBackground" />
+
+            <TextView
+                android:layout_margin="2dp"
+                android:id="@+id/sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/shimmerBackground"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@string/title_goes_here"
+                android:background="@color/shimmerBackground"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
 
             <TextView
+                android:layout_margin="5dp"
                 android:id="@+id/Msg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/content_goes_here"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/shimmerBackground"
                 android:textSize="12sp" />
         </LinearLayout>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/sender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rooot"
-        android:gravity="center"
-        android:textStyle="italic|bold"
-        android:background="@color/secondaryColor"
-        android:text="@string/sender"
-        android:textSize="12sp" />
-</RelativeLayout>
-
 
 </androidx.cardview.widget.CardView>

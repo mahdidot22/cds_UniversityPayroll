@@ -7,13 +7,22 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:fullBackupContent="true"
         android:icon="@drawable/main_icon"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/main_icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UniversityPayroll"
-        android:fullBackupContent="true">
+        android:theme="@style/Theme.UniversityPayroll">
+        <activity
+            android:name=".employee.BankActivity"
+            android:exported="false" />
+        <activity
+            android:name=".employee.CheckActivity"
+            android:exported="false" />
+        <activity
+            android:name=".employee.PaymentForm"
+            android:exported="false" />
         <activity
             android:name=".employee.CreditCardForm"
             android:exported="false" />

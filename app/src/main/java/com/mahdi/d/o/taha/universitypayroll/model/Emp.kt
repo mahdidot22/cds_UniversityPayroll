@@ -72,4 +72,77 @@ data class Emp(
         }
 
     }
+    data class Casual(val username:String, val id:String, val contract:String,val sal:String,val year:String,val payments:String):Parcelable {
+        constructor(parcel: Parcel) : this(
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString()
+        ) {
+        }
+
+        override fun writeToParcel(parcel: Parcel, flags: Int) {
+            parcel.writeString(username)
+            parcel.writeString(id)
+            parcel.writeString(contract)
+            parcel.writeString(sal)
+            parcel.writeString(year)
+            parcel.writeString(payments)
+        }
+
+        override fun describeContents(): Int {
+            return 0
+        }
+
+        companion object CREATOR : Parcelable.Creator<Casual> {
+            override fun createFromParcel(parcel: Parcel): Casual {
+                return Casual(parcel)
+            }
+
+            override fun newArray(size: Int): Array<Casual?> {
+                return arrayOfNulls(size)
+            }
+        }
+    }
+
+    data class Full(val username:String, val id:String, val contract:String,val sal:String,val year:String,val holidays:String,val remainingHolidays:String, val payments:String):Parcelable {
+        constructor(parcel: Parcel) : this(
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString(),
+            parcel.readString().toString()
+        ) {
+        }
+
+        override fun writeToParcel(parcel: Parcel, flags: Int) {
+            parcel.writeString(username)
+            parcel.writeString(id)
+            parcel.writeString(contract)
+            parcel.writeString(sal)
+            parcel.writeString(year)
+            parcel.writeString(holidays)
+            parcel.writeString(remainingHolidays)
+            parcel.writeString(payments)
+        }
+
+        override fun describeContents(): Int {
+            return 0
+        }
+
+        companion object CREATOR : Parcelable.Creator<Full> {
+            override fun createFromParcel(parcel: Parcel): Full {
+                return Full(parcel)
+            }
+
+            override fun newArray(size: Int): Array<Full?> {
+                return arrayOfNulls(size)
+            }
+        }
+    }
 }

@@ -15,6 +15,7 @@ import com.mahdi.d.o.taha.universitypayroll.admin.Employees_Mnagment
 import com.mahdi.d.o.taha.universitypayroll.databinding.ActivityMainBinding
 import com.mahdi.d.o.taha.universitypayroll.employee.Statistics
 import com.mahdi.d.o.taha.universitypayroll.model.Constants
+import com.mahdi.d.o.taha.universitypayroll.model.Emp
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,11 +54,45 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 if (it.isEmpty) constants.addingMsg(binding, "There is no emp!!")
                 else {
+                    var list = arrayListOf<Any>()
                     for (doc in it) {
                         val userName = doc.get("id")
+                        val fullName = doc.get("fullName")
                         val userPsw = doc.get("psw")
+                        val contractType = doc.get("contract")
+                        val salary = doc.get("salary")
+                        val year = doc.get("year")
+                        val holidays = doc.get("acceptedHolidays")
+                        val remaining = doc.get("remainingHolidays")
+                        val payments = doc.get("payments")
                         if (userName == username.toString() && userPsw == psw.toString()) {
-                            startActivity(Intent(this@MainActivity, Statistics::class.java))
+                            if (contractType == "Part-Time") {
+                                list.add(
+                                    Emp.Casual(
+                                        fullName.toString(),
+                                        userName.toString(),
+                                        contractType.toString(),
+                                        salary.toString(),
+                                        year.toString(),
+                                        payments.toString()
+                                    )
+                                )
+                            } else if (contractType == "Full-Time") {
+                                list.add(
+                                    Emp.Full(
+                                        fullName.toString(),
+                                        userName.toString(),
+                                        contractType.toString(),
+                                        salary.toString(),
+                                        year.toString(),
+                                        holidays.toString(),
+                                        remaining.toString(),
+                                        payments.toString()
+                                    )
+                                )
+                            }
+                            saveUsername(fullName.toString())
+                            startActivity(Intent(this@MainActivity, Statistics::class.java).putExtra("user",list).putExtra("type",contractType.toString()))
                             username.clear()
                             psw.clear()
                         } else {
@@ -81,6 +116,7 @@ class MainActivity : AppCompatActivity() {
                     val userName = doc.get("username")
                     val userPsw = doc.get("psw")
                     if (userName == username.toString() && userPsw == psw.toString()) {
+                        saveUsername(username.toString())
                         startActivity(Intent(this@MainActivity, Employees_Mnagment::class.java))
                         username.clear()
                         psw.clear()
@@ -99,5 +135,12 @@ class MainActivity : AppCompatActivity() {
         } else {
             psw.transformationMethod = HideReturnsTransformationMethod.getInstance()
         }
+    }
+
+    private fun saveUsername(username: String) {
+        val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+        val myEdit = sharedPreferences.edit()
+        myEdit.putString("username", username)
+        myEdit.apply()
     }
 }

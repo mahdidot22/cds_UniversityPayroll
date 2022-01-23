@@ -15,6 +15,7 @@
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_employees_manegment.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_notifications.xml" value="0.25" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_payment_form.xml" value="0.245018115942029" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_settings.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/activity_statistics.xml" value="0.264" />
@@ -26,6 +27,7 @@
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/emp_item_grid.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/emp_item_placeholder.xml" value="0.22780797101449277" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/notification_item.xml" value="0.264" />
+        <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/notification_item_placeholder.xml" value="0.4" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/menu/managment_menu.xml" value="0.264" />
         <entry key="..\:/Studying/Projects/Mobile/Android/Kotlin/UniversityPayroll/app/src/main/res/menu/notification_menu.xml" value="0.25" />
